@@ -1,6 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\Anon3mou5\\ConvO\\key')
+            keyPassword '#hello123'
+        }
+    }
     compileSdkVersion 29
 
     defaultConfig {
