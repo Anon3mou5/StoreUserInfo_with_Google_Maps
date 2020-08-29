@@ -2,4 +2,5 @@
     <string name="app_name">Task</string>
     <string name="navigation_drawer_open">idk</string>
     <string name="navigation_drawer_close">closed</string>
+    <string name="google_maps_api_key">AIzaSyDHXAMDW7Z4CsFM2lf5Q69WaJO534WtGDg</string>
 </resources>

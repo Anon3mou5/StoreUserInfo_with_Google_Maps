@@ -16,6 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.github.florent37.shapeofview.ShapeOfView;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.io.Serializable;
+import java.util.List;
+
 public class signinacti extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,9 +46,10 @@ public class signinacti extends AppCompatActivity {
                     Snackbar.make(findViewById(R.id.constraint2),"User-not-found",Snackbar.LENGTH_SHORT).show();
                 }
                 else
-                {
+                {    List<people> obj = peopleremoteclass.getinstance(c).doe().getelements();
                     Intent nwe = new Intent(signinacti.this,homescreen.class);
-                    nwe.putExtra("obj",  p);
+                    nwe.putExtra("objk", (Serializable) p);
+                    nwe.putExtra("obj", (Serializable) obj);
                     startActivity(nwe);
                     finish();
                 }

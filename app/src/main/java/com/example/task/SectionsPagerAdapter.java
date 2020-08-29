@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.lifecycle.ViewModelProviders;
+
+import java.util.List;
+
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
@@ -15,9 +18,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     //private static final String[] TAB_TITLES = new String[]{"business-insider","CNN","BUZZFEED","ESPN","bbc-news","politico","fox-news","google-news","AL-JAZEERA-ENGLISH","news-com-au"};
     private final Context mContext;
     int total;
-    people object;
+    List<people> object;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm, int total, people obj) {
+    public SectionsPagerAdapter(Context context, FragmentManager fm, int total, List<people> obj) {
         super(fm);
         mContext = context;
         this.total = total;

@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,6 +22,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class homescreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -54,7 +56,16 @@ public class homescreen extends AppCompatActivity implements NavigationView.OnNa
 
         tabLayout.setSelectedTabIndicatorHeight((int) (5 * getResources().getDisplayMetrics().density));
         tabLayout.setTabTextColors( Color.parseColor("#BCFFFFFF"),Color.parseColor("#FFFFFF"));
-people obj = (people) getIntent().getSerializableExtra("obj");
+List<people> obj = (List<people>) getIntent().getSerializableExtra("obj");
+        people objk = (people) getIntent().getSerializableExtra("objk");
+        View v = navigationView.getHeaderView(0);
+        TextView name = v.findViewById(R.id.name);
+        name.setText(objk.getName());
+        TextView email = v.findViewById(R.id.email);
+        email.setText(objk.getEmail());
+        TextView phno = v.findViewById(R.id.phonenum);
+        phno.setText(objk.getPhno());
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager(),tabLayout.getTabCount(),obj);
         viewPager.setAdapter(sectionsPagerAdapter);

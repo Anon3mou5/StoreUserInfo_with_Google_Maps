@@ -127,6 +127,43 @@
 
 
                 <TextView
+                    android:id="@+id/address"
+                    android:layout_width="138dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/cabin_bold"
+                    android:paddingTop="10dp"
+                    android:text="Address"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:transitionName="AddresAddress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/emailedit" />
+
+                <EditText
+                    android:id="@+id/addressedit"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/strokes"
+                    android:ems="10"
+
+                    android:fontFamily="@font/work_sans_semibold"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="#1/c,maligmvknve"
+                    android:textColor="#FFFFFF"
+                    android:transitionName="emailedit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/address" />
+
+
+                <TextView
                     android:id="@+id/name"
                     android:layout_width="131dp"
                     android:layout_height="37dp"
@@ -192,13 +229,12 @@
                     android:textStyle="bold"
                     android:transitionName="pass"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/emailedit" />
+                    app:layout_constraintTop_toBottomOf="@+id/addressedit" />
 
                 <EditText
                     android:id="@+id/confirmpassedit"
                     android:layout_width="300dp"
                     android:layout_height="45dp"
-                    android:layout_marginStart="52dp"
                     android:layout_marginTop="7dp"
                     android:background="@drawable/strokes"
                     android:ems="10"
@@ -209,6 +245,7 @@
                     android:paddingEnd="15dp"
                     android:text="#Hello123#"
                     android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/confirmpass"
                     app:passwordToggleTint="#FFFFFF" />
@@ -240,26 +277,11 @@
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold"
+                    android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/confirmpassedit" />
-
-                <TextView
-                    android:id="@+id/passindication"
-                    android:layout_width="176dp"
-                    android:layout_height="29dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/text_design"
-                    android:fontFamily="@font/cabin_semibold"
-                    android:text="must conatain only alphabet"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="10dp"
-                    android:visibility="invisible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/pass"
-                    app:layout_constraintTop_toTopOf="@+id/pass" />
 
                 <TextView
                     android:id="@+id/logo"
@@ -267,7 +289,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/catamaran_bold"
-                    android:text="teamwork.us"
+                    android:text="Lattice"
                     android:textColor="#FFFFFF"
                     android:textSize="50dp"
                     app:layout_constraintEnd_toEndOf="parent"
